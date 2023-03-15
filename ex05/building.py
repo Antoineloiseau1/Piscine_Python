@@ -2,6 +2,7 @@ import sys
 
 
 def count_punct(text:  str) -> int:
+    # this function counts the number of punctuation in a string
     count = 0
     for i in range(0, len(text)):
         if text[i] in ('!', ",", "\'", ";", "\"", ".", "-", "?"):
@@ -10,6 +11,7 @@ def count_punct(text:  str) -> int:
 
 
 if __name__ == "__main__":
+    # this program counts the number of characters in his argument or input
     try:
         assert len(sys.argv) <= 2, "AssertionError: more than \
         one argument are provided"
