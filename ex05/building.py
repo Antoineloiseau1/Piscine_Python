@@ -19,7 +19,8 @@ if __name__ == "__main__":
         sys.exit(msg)
 
     if (len(sys.argv) == 1):
-        text = input("What is the text to count?\n")
+        print("What is the text to count?")
+        text = sys.stdin.readline()
     else:
         text = sys.argv[1]
     print("The text contains", len(text), "characters:")
@@ -27,7 +28,7 @@ if __name__ == "__main__":
     print(len([i for i in text if i.islower()]), "lower letters")
     print(count_punct(text), "punctuation marks")
     if (len(sys.argv) == 1):
-        print(len([i for i in text if i.isspace()]) + 1, "spaces")
+        print(len([i for i in text if i.isspace()]), "spaces")
     else:
         print(len([i for i in text if i.isspace()]), "spaces")
     print(len([i for i in text if i.isdigit()]), "digits")
