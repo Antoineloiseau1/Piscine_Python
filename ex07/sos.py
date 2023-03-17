@@ -23,5 +23,8 @@ if __name__ == "__main__":
     msg = ""
     for char in sys.argv[1]:
         if char.upper() in NESTED_MORSE:
-            msg += NESTED_MORSE[char.upper()]
-    print(msg)
+            msg += NESTED_MORSE[char.upper()] + " "
+    if msg.endswith(" "):
+        print(msg.strip())
+    else:
+        print(msg)
